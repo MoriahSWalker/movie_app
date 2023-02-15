@@ -1,15 +1,22 @@
 const express = require("express");
 require("dotenv").config();
-
+// pull in axios for making calls to api
 const axios = require("axios");
+const cors = require("cors");
+
 const app = express();
-
-// console.log(process.endv.API_KEY);
-
-app.get("/get_movie/:movieString", (req, res) => {
+app.use(cors("*/*"));
+app.get("/get_movie/:movieString", async (req, res) => {
   console.log(req.params.movieString);
-  res.send("good request");
+  // call API
+  let apiResponse = await axios(
+    `https://www.omdbapi.com/?apikey=${process.env.API_KEY}&t=${req.params.movieString}`
+  );
+  const data = apiResponse.data;
+  console.log(data);
+  res.json(data);
 });
-app.listen(3001, () => {
-  console.log(`Server is Listening on 3001`);
+
+app.listen(4000, () => {
+  console.log(`Server is Listening on 4000`);
 });
