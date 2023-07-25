@@ -1,0 +1,42 @@
+section {
+    padding-top: 4em;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5em;
+
+}
+
+.search {
+    display: flex;
+    /* margin: 16px; */
+
+    margin-right: 5em;
+}
+
+div form {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+form label {
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: oswald;
+    font-size: 23px;
+}
+
+input {
+    border-radius: 53px;
+    border-style: none;
+    height: 20px;
+    width: 150px;
+}

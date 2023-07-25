@@ -1,0 +1,39 @@
+div.movie-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+}
+
+img {
+    max-width: 320px;
+    max-height: 444px
+}
+
+.year-rate-time {
+    display: flex;
+    gap: 3em;
+}
+
+div.movie-data {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 82px;
+    align-items: center;
+}
+
+section {
+    padding-top: 4em;
+    padding-bottom: 3em;
+}
+
+div.col-2 {
+    width: 460px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+p.plot {
+    padding-top: 20px;
+}

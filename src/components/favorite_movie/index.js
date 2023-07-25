@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 const FavoriteMovies = (props) => {
   let { movieArray } = props;
@@ -7,8 +8,8 @@ const FavoriteMovies = (props) => {
     return <div key={index}>{title}</div>;
   });
   return (
-    <div style={{ marginBottom: "50px" }}>
-      <h1>Favorite Movies</h1>
+    <div className="favorites_list">
+      <h1 className="favorites_title">Favorite Movies</h1>
       {arrayJSX}
     </div>
   );

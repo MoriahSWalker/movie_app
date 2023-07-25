@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import "./style.css";
 
 // accepting props from app.js for searchedMovie
 const Search = (props) => {
@@ -55,27 +56,24 @@ const Search = (props) => {
 
   // return is where the display happens
   return (
-    <section
-      style={{
-        borderBottom: "4px solid black",
-        marginBottom: "20px",
-        paddingBottom: "12px",
-      }}
-    >
-      <h3>Search</h3>
-      <form onSubmit={(event) => handleSubmit(event)}>
-        <label htmlFor="movie-search">
-          Type the name of the movie you want to see!
-        </label>
-        <input
-          type="text"
-          name="movie-search"
-          value={searchString}
-          placeholder="movie name"
-          onChange={(event) => handleChange(event)}
-        />
-        <button type="">Submit</button>
-      </form>
+    <section className="header">
+      <a href="#">
+        <span>MooovieDb</span>
+      </a>
+      <div className="search">
+        <form onSubmit={(event) => handleSubmit(event)}>
+          <label htmlFor="movie-search">Find A Film</label>
+          <input
+            type="text"
+            name="movie-search"
+            value={searchString}
+            placeholder=" search"
+            onChange={(event) => handleChange(event)}
+          />
+          {/* <button type="">Submit</button> */}
+        </form>
+      </div>
+      
     </section>
   );
 };

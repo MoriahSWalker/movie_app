@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 const MovieRatings = (props) => {
   let { searchedMovie } = props;
@@ -22,7 +23,7 @@ const MovieRatings = (props) => {
   };
 
   return (
-    <div>
+    <div className="ratings-div">
       <h1>Movie Ratings</h1>
       {searchedMovie === null ? returnLoader() : returnMovieRatings()}
     </div>
